@@ -69,3 +69,19 @@ const sumEvens = (arr, i = 0, sum = 0) => {
     return sumEvens(arr, i, sum)
 }
 console.log(sumEvens([2, 3, 5, 6]))
+
+// - ### Recursive range
+
+// Write a function called `range` which takes in two numbers (num1, num2) as arguments. The function should return an array of numbers between num1 and num2.
+
+// ```js
+// range(2,10); // returns [2, 3, 4, 5, 6,7, 8, 9, 10]
+// range(17,20); // returns [17, 18, 19, 20]
+// ```}
+
+const range = (num1,num2, Arr=[])=>{
+    if(Arr[Arr.length-1] === num2) return Arr;
+    Arr.push(num1)
+    return range(num1+1,num2,Arr)
+}
+console.log(range(2,10)); // returns [17, 18, 19, 20]
