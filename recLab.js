@@ -72,7 +72,8 @@ console.log(sumEvens([2, 3, 5, 6]))
 
 // - ### Recursive range
 
-// Write a function called `range` which takes in two numbers (num1, num2) as arguments. The function should return an array of numbers between num1 and num2.
+// Write a function called `range` which takes in two numbers (num1, num2) as arguments. 
+//The function should return an array of numbers between num1 and num2.
 
 // ```js
 // range(2,10); // returns [2, 3, 4, 5, 6,7, 8, 9, 10]
@@ -107,7 +108,8 @@ console.log(tripleStep(10));
 
 // - ### Coin Combos
 
-// Given an infinite number of quarters, dimes, nickels, and pennies, write code to calculate the number of possible ways of giving exact change for `n` cents.
+// Given an infinite number of quarters, dimes, nickels, and pennies, write code 
+//to calculate the number of possible ways of giving exact change for `n` cents.
 
 // In other words, write a function called `coinCombos` that takes in one argument: `n`, which represents the total amount of money (in cents) that you need to make change for. Your function should return the amount of possible combinations you can make to return that exact amount of change.
 
@@ -119,12 +121,14 @@ console.log(tripleStep(10));
 // coinCombos(60); //returns 73
 // ```
 
-// const coinCombos = (num) =>{
-//     if(num < 0 ) return 0
-//     if(num === 0) return 1
-//     return coinCombos(num-1)+coinCombos(num-5) +coinCombos(num-10)
-// }
-// console.log(coinCombos(10)); //returns 2
+const coinCombos = (num) =>{
+    if(num < 0 ) return 0
+    if(num === 0) return 1
+    return coinCombos(num-1)+coinCombos(num-5) +coinCombos(num-10)
+}
+console.log(coinCombos(10)); //returns 2
 // coinCombos(10); //returns 4
 // coinCombos(25); //returns 13
 // coinCombos(60); //returns 73
+
+
