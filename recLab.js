@@ -85,3 +85,22 @@ const range = (num1,num2, Arr=[])=>{
     return range(num1+1,num2,Arr)
 }
 console.log(range(2,10)); // returns [17, 18, 19, 20]
+
+// - ### Triple Step
+
+// A child is running up a staircase with n steps and can hop either 1 step 2 steps or 3 steps at a time. Write a function called 'tripleStep', that takes in an argument `n` that represents the number of steps in the staircase, and returns a count of how many possible ways the child can run up the stairs.
+
+// ```js
+// tripleStep(3); //returns 4
+// tripleStep(4); //returns 7
+// tripleStep(5); //returns 13
+// tripleStep(10); //returns 274
+// ```
+
+const tripleStep=(num,count = 0)=>{
+    if(num === 0) return 1
+    if(num < 0 ) return 0
+    return tripleStep(num-1)+tripleStep(num-2)+tripleStep(num-3)
+}
+
+console.log(tripleStep(5));
