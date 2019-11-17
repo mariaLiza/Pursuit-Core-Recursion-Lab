@@ -97,10 +97,34 @@ console.log(range(2,10)); // returns [17, 18, 19, 20]
 // tripleStep(10); //returns 274
 // ```
 
-const tripleStep=(num,count = 0)=>{
+const tripleStep=(num)=>{
     if(num === 0) return 1
     if(num < 0 ) return 0
     return tripleStep(num-1)+tripleStep(num-2)+tripleStep(num-3)
 }
 
-console.log(tripleStep(5));
+console.log(tripleStep(10));
+
+// - ### Coin Combos
+
+// Given an infinite number of quarters, dimes, nickels, and pennies, write code to calculate the number of possible ways of giving exact change for `n` cents.
+
+// In other words, write a function called `coinCombos` that takes in one argument: `n`, which represents the total amount of money (in cents) that you need to make change for. Your function should return the amount of possible combinations you can make to return that exact amount of change.
+
+// For example:
+// ```js
+// coinCombos(5); //returns 2
+// coinCombos(10); //returns 4
+// coinCombos(25); //returns 13
+// coinCombos(60); //returns 73
+// ```
+
+// const coinCombos = (num) =>{
+//     if(num < 0 ) return 0
+//     if(num === 0) return 1
+//     return coinCombos(num-1)+coinCombos(num-5) +coinCombos(num-10)
+// }
+// console.log(coinCombos(10)); //returns 2
+// coinCombos(10); //returns 4
+// coinCombos(25); //returns 13
+// coinCombos(60); //returns 73
